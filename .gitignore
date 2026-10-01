@@ -20,3 +20,7 @@ _assets/
 .agent-teams/
 hs_err_pid*.log
 replay_pid*.log
+
+# 诊断残留
+_push.*
+
