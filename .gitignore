@@ -1,13 +1,10 @@
-﻿# 构建产物
+﻿# 构建产物与本地环境
 build/
 .gradle/
 run/
-*.log
-# 预置构建环境（体积大，不入库）
 .jdk25/
 .gradle-home/
 .tmp/
-# 诊断/探针残留
 _probe*/
 _diag/
 _artwork/
@@ -16,11 +13,10 @@ _assets/
 .t*-shots/
 .review-t*/
 *probe/
-# 其他
 .agent-teams/
+# 日志
+*.log
 hs_err_pid*.log
 replay_pid*.log
-
 # 诊断残留
 _push.*
-

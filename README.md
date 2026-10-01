@@ -58,7 +58,7 @@ When you switch to a new modpack (or upgrade a pack), your worlds, keybinds, mod
 ## Installation
 
 1. Install **Fabric Loader ≥ 0.19.5** and **Fabric API**;
-2. Drop `instance-mover-fabric-26.2-1.0.1.jar` into the instance's `mods\` folder;
+2. Drop `instance-mover-fabric-26.2-1.0.2.jar` into the instance's `mods\` folder;
 3. Launch the game and **stay on the title screen for a few seconds** — the migration screen pops up on first run.
 
 ## Usage
@@ -98,7 +98,7 @@ Requires **JDK 25** (Minecraft 26.2 minimum):
 gradlew.bat build
 ```
 
-Output: `build/libs/instance-mover-fabric-26.2-1.0.1.jar`
+Output: `build/libs/instance-mover-fabric-26.2-1.0.2.jar`
 
 > Toolchain (see `gradle.properties`): Minecraft 26.2 · Fabric Loader 0.19.5 · Fabric Loom 1.17.21 · Fabric API 0.159.0+26.2
 > Machine-specific JDK paths and proxy settings were stripped from `gradle.properties`; add your own if needed.
@@ -200,7 +200,7 @@ In-game self-test: add the JVM argument `-Dinstance_mover.selftest=true` and the
 ## 四、安装
 
 1. 装好 **Fabric Loader ≥ 0.19.5** 与 **Fabric API**；
-2. 把 `instance-mover-fabric-26.2-1.0.1.jar` 放进该实例的 `mods\` 目录；
+2. 把 `instance-mover-fabric-26.2-1.0.2.jar` 放进该实例的 `mods\` 目录；
 3. 启动游戏，**停在标题界面等几秒** —— 第一次进入会自动弹出迁移界面。
 
 ## 五、使用流程
@@ -237,7 +237,7 @@ In-game self-test: add the JVM argument `-Dinstance_mover.selftest=true` and the
 gradlew.bat build      # Windows
 ```
 
-产物：`build/libs/instance-mover-fabric-26.2-1.0.1.jar`
+产物：`build/libs/instance-mover-fabric-26.2-1.0.2.jar`
 
 > 版本组合（见 `gradle.properties`）：Minecraft 26.2 · Fabric Loader 0.19.5 · Fabric Loom 1.17.21 · Fabric API 0.159.0+26.2
 > 开发机专有的 JDK 路径与代理配置已从 `gradle.properties` 移除，需要时请自行添加。
