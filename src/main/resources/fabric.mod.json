@@ -3,12 +3,17 @@
   "id": "instance_mover",
   "version": "${version}",
   "name": "实例酱的搬家服务",
-  "description": "首次进入整合包时自动探测同 versions 隔离目录下的其他版本实例，勾选要迁移的玩家数据后合并覆盖到当前实例。该模组由 deepseek 和 sd_dt 编写。",
+  "description": "首次进入整合包时自动探测同 versions 隔离目录下的其他版本实例，勾选要迁移的玩家数据后合并覆盖到当前实例。该模组由 deepseek 和 sd_dt 编写。\n项目主页 / 源码 / 问题反馈：https://github.com/sd-dt/instance-mover",
   "icon": "assets/instance_mover/icon.png",
   "authors": [
     "deepseek",
     "sd_dt"
   ],
+  "contact": {
+    "homepage": "https://github.com/sd-dt/instance-mover",
+    "sources": "https://github.com/sd-dt/instance-mover",
+    "issues": "https://github.com/sd-dt/instance-mover/issues"
+  },
   "environment": "client",
   "entrypoints": {
     "client": [

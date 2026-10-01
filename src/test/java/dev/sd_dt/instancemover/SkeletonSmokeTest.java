@@ -42,7 +42,10 @@ class SkeletonSmokeTest {
 
         assertFalse(json.contains("${version}"), "processResources 没有展开 ${version}");
         assertTrue(json.contains("\"id\": \"instance_mover\""), "mod id 不对");
-        assertTrue(json.contains("\"version\": \"1.0.0\""), "mod 版本没有展开成 1.0.0");
+        // 刻意不写死版本号：版本随 gradle.properties 的 mod_version 走，
+        // 这里只断言「已展开成 x.y.z 形式」，避免每次升版本都要改测试。
+        assertTrue(json.matches("(?s).*\"version\"\\s*:\\s*\"\\d+\\.\\d+\\.\\d+\".*"),
+                "mod 版本没有展开成 x.y.z 形式：" + json.replaceAll("(?s).*(\"version\"\\s*:\\s*\"[^\"]*\").*", "$1"));
         assertTrue(json.contains("实例酱的搬家服务"), "模组中文名不对（注意 UTF-8 过滤编码）");
         assertTrue(json.contains("\"environment\": \"client\""), "environment 必须是 client");
         assertTrue(
