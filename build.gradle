@@ -58,3 +58,17 @@ tasks.named("test") {
         events "passed", "skipped", "failed"
     }
 }
+
+// 本机环境补丁：Java 对系统 TEMP 的可写性检查在该环境下失败（Files.isWritable=false），
+// 导致 JUnit 的 @TempDir 无法创建目录。把测试 JVM 的临时目录指到工作区内即可。
+tasks.named("test") {
+    // 某些受限环境下，Java 对系统临时目录的可写性检查会失败（Files.isWritable=false），
+    // 导致 JUnit 的 @TempDir 无法创建目录。此时把测试 JVM 的临时目录改到工作区内；
+    // 正常环境下这一行不会生效。
+    def sysTmp = System.getProperty("java.io.tmpdir")
+    if (sysTmp == null || !java.nio.file.Files.isWritable(java.nio.file.Path.of(sysTmp))) {
+        def testTmp = layout.projectDirectory.dir(".tmp/junittmp").asFile
+        doFirst { testTmp.mkdirs() }
+        jvmArgs "-Djava.io.tmpdir=${testTmp.absolutePath.replace('\\', '/')}"
+    }
+}
