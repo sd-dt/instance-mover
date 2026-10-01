@@ -1,0 +1,16 @@
+// 把不可达/超时的仓库重定向到可达镜像（仅本项目的 init 脚本）
+def fix = { repos ->
+    def apply = { repo ->
+        if (repo instanceof MavenArtifactRepository) {
+            def u = repo.url.toString()
+            if (u.contains('plugins.gradle.org') || u.contains('api.modrinth.com')) {
+                println "[init-redirect] ${u} -> https://maven.aliyun.com/repository/public/"
+                repo.setUrl('https://maven.aliyun.com/repository/public/')
+            }
+        }
+    }
+    repos.whenObjectAdded { apply(it) }
+    repos.all { apply(it) }
+}
+settingsEvaluated { s -> fix(s.pluginManagement.repositories) }
+allprojects { p -> fix(p.repositories); fix(p.buildscript.repositories) }

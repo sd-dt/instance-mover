@@ -1,0 +1,115 @@
+{
+  "instance_mover.mod_name": "实例酱的搬家服务",
+
+  "instance_mover.author_line": "该模组由 deepseek 和 sd_dt 编写",
+
+  "instance_mover.screen.title": "玩家数据迁移  v1.0",
+
+  "instance_mover.section.source": "① 选择老实例",
+  "instance_mover.section.items": "② 选择要迁移的内容",
+
+  "instance_mover.source.detected": "已探测到 %s 个版本实例",
+  "instance_mover.source.none": "没有探测到其他版本实例，请在下面手动填写路径",
+  "instance_mover.source.path_label": "路径",
+  "instance_mover.source.manual_hint": "也可以直接粘贴路径",
+  "instance_mover.source.browse": "浏览…",
+  "instance_mover.source.detect": "检测",
+  "instance_mover.source.status_label": "状态：%s",
+  "instance_mover.source.status_ok": "✔ 含 saves %s 个、config %s 项、共 %s",
+
+  "instance_mover.source.invalid.not_dir": "目录不存在或不是文件夹",
+  "instance_mover.source.invalid.same": "这就是当前实例本身，请选择另一个",
+  "instance_mover.source.invalid.not_instance": "没有找到 saves 或 config，不像一个游戏实例",
+
+  "instance_mover.source.notice.downgrade": "所选目录里没有实例文件，已自动改用子目录：%s",
+
+  "instance_mover.items.select_all": "全选",
+  "instance_mover.items.invert": "反选",
+  "instance_mover.items.defaults_only": "仅默认",
+
+  "instance_mover.items.group.default": "默认直接迁移（%s 项）",
+  "instance_mover.items.group.extra": "额外玩家信息（老实例中检测到，可勾选）",
+  "instance_mover.items.group.missing": "老实例中未找到（自动跳过）",
+
+  "instance_mover.items.restart_badge": "（需重启生效）",
+
+  "instance_mover.items.missing.reason.missing": "不存在",
+  "instance_mover.items.missing.reason.wrong_type": "类型不符",
+  "instance_mover.items.missing.line": "%s：%s",
+
+  "instance_mover.option.backup": "迁移前先备份到「_转移备份_日期_时间」",
+  "instance_mover.option.skip_same": "跳过内容完全相同的文件",
+
+  "instance_mover.button.help": "查看每项作用",
+  "instance_mover.button.about": "关于",
+  "instance_mover.button.start": "开始迁移",
+  "instance_mover.button.later": "稍后再说",
+  "instance_mover.button.never": "不再提示",
+  "instance_mover.button.abort": "中止",
+  "instance_mover.button.back": "返回",
+  "instance_mover.button.done": "完成",
+  "instance_mover.button.open_backup": "打开备份目录",
+  "instance_mover.button.quit_game": "退出游戏",
+  "instance_mover.button.copy_errors": "复制失败清单",
+
+  "instance_mover.phase.counting": "正在统计文件…",
+  "instance_mover.phase.backup": "正在备份新实例中将被覆盖的内容…",
+  "instance_mover.phase.transfer": "正在转移数据…",
+
+  "instance_mover.progress.files": "已完成 %s / %s 个文件",
+
+  "instance_mover.result.title": "迁移完成",
+  "instance_mover.result.cancelled_title": "已取消",
+  "instance_mover.result.success": "成功 %s（新增 %s / 覆盖 %s）",
+  "instance_mover.result.skipped": "跳过 %s",
+  "instance_mover.result.failed": "失败 %s",
+  "instance_mover.result.bytes": "写入 %s",
+  "instance_mover.result.elapsed": "耗时 %s 秒",
+  "instance_mover.result.backup": "备份目录：%s",
+  "instance_mover.result.no_errors": "没有失败文件",
+  "instance_mover.result.skipped_items": "老实例中缺失、已跳过：%s",
+  "instance_mover.result.warnings": "警告",
+
+  "instance_mover.restart.title": "需要重启游戏",
+  "instance_mover.restart.body": "以下配置类内容已被覆盖，需要重启游戏才会生效：%s。不重启直接退出游戏，这些改动可能被游戏反向覆盖回去。",
+  "instance_mover.restart.hint": "建议现在点「退出游戏」，再重新启动整合包。",
+
+  "instance_mover.warning.session_lock": "存档「%s」含 session.lock：若该实例的游戏正在运行，请先关闭再迁移，否则存档可能不完整。",
+
+  "instance_mover.about.title": "关于",
+  "instance_mover.about.body": "把「老实例」里勾选的玩家数据合并覆盖到当前实例。\n新实例里的模组（mods）、版本（versions）、启动器文件不会被删除。\n文件夹采用合并覆盖：同名文件被覆盖，新实例里独有的文件保留。",
+  "instance_mover.about.item_help_title": "每项内容的作用",
+  "instance_mover.about.version": "版本：%s",
+  "instance_mover.about.mod_id": "模组 ID：%s",
+  "instance_mover.about.guide.status_on": "当前：下次启动会弹出迁移引导",
+  "instance_mover.about.guide.status_off": "当前：已提示过，下次启动不再弹出（可点下面的按钮重置）",
+  "instance_mover.about.guide.status_unknown": "当前：拿不到配置文件，暂时无法重置",
+  "instance_mover.about.guide.reset": "重新显示迁移引导（下次启动生效）",
+  "instance_mover.about.guide.saved": "已设置：下次启动会重新弹出迁移引导",
+  "instance_mover.about.guide.save_failed": "保存失败，没能写入标记文件：",
+  "instance_mover.about.guide.note": "说明：完成一次真实迁移后就不再自动弹出；想重看随时点上面的按钮，不需要去改 config\\instance_mover.json。",
+  "instance_mover.browse.title": "选择老实例目录",
+  "instance_mover.browse.current": "当前位置：%s",
+  "instance_mover.browse.empty": "（这个目录里没有子文件夹）",
+  "instance_mover.browse.up": "上一级",
+  "instance_mover.browse.choose": "选择此目录",
+
+  "instance_mover.items.default_badge": "默认勾选",
+  "instance_mover.items.selected": "已勾选 %s 项（约 %s）",
+
+  "instance_mover.page.prev": "上一页",
+  "instance_mover.page.next": "下一页",
+  "instance_mover.page.indicator": "第 %s / %s 页",
+
+  "instance_mover.source.switch_hint": "点击切换探测到的版本实例",
+
+  "instance_mover.warn.no_source": "请先选择一个老实例目录",
+  "instance_mover.warn.no_selection": "请至少勾选一项要迁移的内容",
+
+  "instance_mover.result.copied": "失败清单已复制到剪贴板",
+  "instance_mover.result.open_failed": "打不开目录，请手动打开：%s",
+
+  "instance_mover.error.title": "出错了",
+
+  "instance_mover.lang.note": "本项目按用户口径只提供中文界面；en_us.json 仅为兼容英文语言环境而存在，值与 zh_cn.json 完全相同。"
+}

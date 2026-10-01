@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "instance_mover",
+  "version": "${version}",
+  "name": "实例酱的搬家服务",
+  "description": "首次进入整合包时自动探测同 versions 隔离目录下的其他版本实例，勾选要迁移的玩家数据后合并覆盖到当前实例。该模组由 deepseek 和 sd_dt 编写。",
+  "icon": "assets/instance_mover/icon.png",
+  "authors": [
+    "deepseek",
+    "sd_dt"
+  ],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.sd_dt.instancemover.InstanceMoverClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "fabric-api": "*",
+    "java": ">=25",
+    "minecraft": "26.2"
+  }
+}
